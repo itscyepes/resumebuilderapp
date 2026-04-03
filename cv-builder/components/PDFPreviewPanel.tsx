@@ -49,7 +49,7 @@ export default function PDFPreviewPanel({ cv, visible }: Props) {
       // Revoke old blob URL to avoid memory leaks
       if (currentUrlRef.current) URL.revokeObjectURL(currentUrlRef.current);
 
-      const blob = new Blob([buffer], { type: 'application/pdf' });
+      const blob = new Blob([new Uint8Array(buffer)], { type: 'application/pdf' });
       const url = URL.createObjectURL(blob);
       currentUrlRef.current = url;
       setBlobUrl(url);
