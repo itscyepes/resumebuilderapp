@@ -1,0 +1,11 @@
+{
+  "buildCommand": "next build",
+  "outputDirectory": ".next",
+  "framework": "nextjs",
+  "regions": ["iad1"],
+  "functions": {
+    "app/api/generate-docx/route.ts": { "maxDuration": 10 },
+    "app/api/generate-pdf/route.ts": { "maxDuration": 10 },
+    "app/api/improve-cv/route.ts": { "maxDuration": 15 }
+  }
+}
