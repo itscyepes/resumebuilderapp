@@ -13,7 +13,7 @@ export async function POST(req: NextRequest) {
     const name = `${cv.personal.firstName || 'CV'}_${cv.personal.lastName || ''}_Resume.pdf`
       .replace(/\s+/g, '_');
 
-    return new NextResponse(buffer, {
+    return new NextResponse(new Uint8Array(buffer), {
       headers: {
         'Content-Type': 'application/pdf',
         'Content-Disposition': `attachment; filename="${name}"`,
