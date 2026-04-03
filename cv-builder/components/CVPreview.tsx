@@ -237,7 +237,7 @@ function TimelinePreview({ cv, s }: { cv: CVData; s: ColorScheme }) {
       </Section>}
 
       {cv.experience.length > 0 && <>
-        <div style={{ fontSize: 9.5, fontWeight: 700, color: primary, marginBottom: 4, textTransform: 'uppercase', letterSpacing: 0.8, fontSize: 8 }}>Experience</div>
+        <div style={{ fontSize: 8, fontWeight: 700, color: primary, marginBottom: 4, textTransform: 'uppercase', letterSpacing: 0.8 }}>Experience</div>
         <div style={{ borderBottom: `1px solid #${s.accent}`, marginBottom: 8 }} />
         <div style={{ position: 'relative', paddingLeft: 16 }}>
           <div style={{ position: 'absolute', left: 4, top: 0, bottom: 0, width: 1, background: `${primary}40` }} />
